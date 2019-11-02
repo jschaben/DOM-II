@@ -100,8 +100,67 @@ imgs.forEach((element, i) => {
         element.src = busImgSrcs[i];
     });
 
-    // Revert images on double click
+    // Original on double click
     element.addEventListener('dblclick', () => {
         element.src = originalImgSrcs[i];
     });
 });
+
+const body = document.querySelectorAll('.main-navigation, body, footer');
+body.forEach(element => {
+    window.addEventListener('scroll', () => {
+        element.style.color = 'firebrick';
+        element.style.backgroundColor = 'lime';
+    });
+});
+
+FunBusBtn[0].addEventListener("mouseover", end => {
+    FunBusBtn[0].style.color = "green";
+    FunBusBtn[0].style.background = "red";
+    FunBusBtn[0].style.padding = "5%";
+    FunBusBtn[0].style.borderRadius = "15%";
+    FunBusBtn[0].style.boxShadow = "2px 17px 35px 1px aliceblue";
+    end.stopPropagation()
+})
+
+FunBusBtn[0].addEventListener("click", end => {
+    FunBusBtn[0].style.color = "hotpink";
+    FunBusBtn[0].style.background = "blue";
+    FunBusBtn[0].style.fontSize = "24px";
+    end.preventDefault();
+    end.stopPropagation();
+})
+
+FunBusBtn[1].addEventListener("mouseover", end => {
+    FunBusBtn[1].style.color = "purple";
+    FunBusBtn[1].style.background = "grey";
+    FunBusBtn[1].style.padding = "6%";
+    FunBusBtn[1].style.borderRadius = "30%";
+    FunBusBtn[1].style.boxShadow = "2px 17px 35px 1px aliceblue";
+    end.stopPropagation()
+})
+
+FunBusBtn[1].addEventListener("click", end => {
+    FunBusBtn[1].style.color = "blue";
+    FunBusBtn[1].style.background = "hotpink";
+    FunBusBtn[1].style.fontSize = "24px";
+    end.preventDefault();
+    end.stopPropagation();
+})
+
+FunBusBtn[2].addEventListener("mouseover", end => {
+    FunBusBtn[2].style.color = "red";
+    FunBusBtn[2].style.background = "green";
+    FunBusBtn[2].style.padding = "8%";
+    FunBusBtn[2].style.borderRadius = "35%";
+    FunBusBtn[2].style.boxShadow = "2px 17px 35px 1px aliceblue";
+    end.stopPropagation()
+})
+
+FunBusBtn[2].addEventListener("click", end => {
+    FunBusBtn[2].style.color = "orange";
+    FunBusBtn[2].style.background = "yellow";
+    FunBusBtn[2].style.fontSize = "24px";
+    end.preventDefault();
+    end.stopPropagation();
+})
